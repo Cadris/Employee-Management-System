@@ -15,20 +15,18 @@
     position: relative;
     display: inline-block;
     border-radius: 2px;
-  }
-  
-  
-  
-  .notification .badge {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    border-radius: 50%;
-    background: red;
-    color: white;
-  }
-  .h-2r{
-	height:2rem;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+.h-2r{
+  height:2rem;
 }
 .h-3r{
 	height:3rem;
@@ -73,18 +71,4 @@
   .fs-30{
     font-size:25px;
   }
-  table{
-    border: 1px black solid;
-  }
-  thead,th{
-    background-color:orange;
-    border:1px black solid;
-  }
-  .fixTableHead {
-    overflow-y: auto;
-    height: 200px;
-  }
-  .fixTableHead thead th {
-    position: sticky;
-    top: 0;
-  }
+  

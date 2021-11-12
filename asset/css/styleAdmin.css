@@ -81,3 +81,12 @@ input[type=text] {
 .fa-file-excel-o{
   color: rgb(15, 133, 0);
 }
+
+.fixTableHead {
+  overflow-y: auto;
+  height: 200px;
+}
+.fixTableHead thead th {
+  position: sticky;
+  top: 0;
+}
