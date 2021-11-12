@@ -72,11 +72,3 @@
     font-size:25px;
   }
   
-  .fixTableHead {
-    overflow-y: auto;
-    height: 200px;
-  }
-  .fixTableHead thead th {
-    position: sticky;
-    top: 0;
-  }
