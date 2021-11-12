@@ -52,30 +52,30 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-sm navbar-light bg-grey">
-    <a class="navbar-brand text-white" href="#">Navbar</a>
+    <a class="navbar-brand text-white" href="/login.html"><h5 class="">ConnectWork</h5></a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="d-flex align-items-center justify-content-end navbar-nav ml-auto mr-2 pr-2">
-        <a class="mt-1 mr-0 pr-0 notification" data-toggle="modal" data-target="#notification-modal">
-            <i class="fa fa-bell .text-white" style="font-size:24px;"></i>
-            <!-- update badge here -->
-            <span class="badge">3</span>
-        </a>
-        <div class="ml-3">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle bg-grey border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-            <img src="./asset/images/icons8-male-user-90.png" class="img-1">
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Employee Details</a>
-                <a class="dropdown-item" href="#">Department Details</a>
-                <a class="dropdown-item" href="#">Project Details</a>
-                <a class="dropdown-item" href="#">Payscale</a>
-                <hr>
-                <a class="dropdown-item" href="#">Logout</a>
+            <a class="mt-1 mr-0 pr-0 notification" data-toggle="modal" data-target="#notification-modal">
+                <i class="fa fa-bell .text-white" style="font-size:24px;"></i>
+                <!-- update badge here -->
+                <span class="badge">3</span>
+            </a>
+            <div class="ml-3">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle bg-grey border-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+                    <img src="./asset/images/icons8-male-user-90.png" class="img-1">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Employee Details</a>
+                        <a class="dropdown-item" href="#">Department Details</a>
+                        <a class="dropdown-item" href="#">Project Details</a>
+                        <a class="dropdown-item" href="#">Payscale</a>
+                        <hr>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
     </div>
 </nav>
 <div class="container-fluid">
@@ -87,12 +87,12 @@
 
             <div class="d-flex py-4 flex-column justify-content-evenly align-items-start text-white  fs-6 fs-sm-5">
                 <a class="py-4 px-4"  href="#">Admin Dashboard</a>
-                <a class="py-4 px-4" href="#">Employee</a>
+                <a class="py-4 px-4" href="/AdminEmployee.html">Employee</a>
                 <a  class="py-4 px-4" href="#">Department</a>
                 <div class="active-section py-4 w-100 ">
                     <a class="py-4 px-4 text-orange" href="#">Project</a>
                 </div>
-                <a class="py-4 px-4"  href="#">PayScale</a>
+                <a class="py-4 px-4"  href="/Admin_PayScale.html">PayScale</a>
             </div>
         </div>
 
@@ -194,11 +194,15 @@
                         <td>lorem1</td>
                         <td>lorem1</td>
                         <td>
-                            <button class="d-flex btn ml-auto" data-keyboard="false" type="button" data-toggle="modal" data-target="#projectDetailsModal">
+                            <button class="d-flex btn" data-keyboard="false" type="button" data-toggle="modal" data-target="#projectDetailsModal">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </button>
                         </td>
-                        <td><i class="fa fa-trash-o" aria-hidden="true"></i></td>
+                        <td>
+                            <button class="d-flex btn" data-keyboard="false" type="button" data-toggle="modal" data-target="#delete-modal">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </button>
+                        </td>
                       </tr>
                     </tbody>
                 </table>
@@ -357,20 +361,19 @@
                 </div>
             </div>
 
-            <div class="modal fade" id="notification-modal" tabindex="-1" data-backdrop="static" data-keyboard="false"
-                role="dialog">
+            <div class="modal fade" id="notification-modal" tabindex="-1" data-keyboard="false" role="dialog">
                 <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
+                    <div class="modal-content bg-lightgrey">
                         <div class="modal-header">
                             <h5 class="modal-title" id="notification-title">Registration Requests</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                            <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
-                        <div class="modal-body">
+                          </div>
+                          <div class="modal-body">
                             <div class="fixTableHead">
-                                <table class="table table-bordered table-striped text-center">
-                                    <thead>
+                                <table class="table table-bordered table-light text-center">
+                                    <thead class="bg-orange">
                                         <tr>
                                             <th>User ID</th>
                                             <th>Name</th>
@@ -385,47 +388,86 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><button class="btn btn-success">Approve</button></td>
+                                            <td><button class="btn bg-grey text-white">Approve</button></td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><button class="btn btn-success">Approve</button></td>
+                                            <td><button class="btn bg-grey text-white">Approve</button></td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><button class="btn btn-success">Approve</button></td>
+                                            <td><button class="btn bg-grey text-white">Approve</button></td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><button class="btn btn-success">Approve</button></td>
+                                            <td><button class="btn bg-grey text-white">Approve</button></td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><button class="btn btn-success">Approve</button></td>
+                                            <td><button class="btn bg-grey text-white">Approve</button></td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
+                             </div>
+                          </div>
                     </div>
                 </div>
             </div>
 
+            <div class="modal fade" id="delete-modal" tabindex="-1" data-keyboard="false" role="dialog">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content bg-lightgrey">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="delete-title">Change Employee Status</h5>
+                            <button type="button" class="close"  data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form  action="">
+                                <div class="form-group">
+                                  <label for="Employee ID">Employee Id:</label>
+                                  <input type="text" value="Emp123" class="form-control bg-white" id="empid" readonly>
+                                </div>
+                                <div class="form-group">
+                                  <label for="Department Code">Department Code:</label>
+                                  <input type="text" value="acc123" class="form-control bg-white" id="dept" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="PayScale Code">Payscale Code:</label>
+                                    <input type="text" value="Slab123" class="form-control bg-white" id="payscale" readonly>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="PayScale Code">Status</label>
+                                    <select class="form-control" id="">
+                                        <option value="">Choose..</option>
+                                        <option value="">Active</option>
+                                        <option value="">Retired</option>
+                                        <option value="">Layoff</option>
+                                        <option value="">Left</option>
+                                    </select>
+                                  </div>
+                            
+                            <div class="ml-auto mr-0 d-block">
+                            <input type="submit" class="btn bg-grey text-white" value="Apply Changes">
+                                </div>
+                              </form>
+                          </div>
+                        </div>
+                        </div>
+            </div>
             <!-- Modals End -->
 
             <!-- Report Gen Buttons -->
